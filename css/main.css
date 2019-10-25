@@ -1,0 +1,66 @@
+.slider-fluid {
+  background-image: url("../img/bigstock-Business-Casual-People-Office-85581455-e1454520589445.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-areas: "slidercontent slidercontent slidercontent" "slidercontent slidercontent slidercontent" "slidercontent slidercontent slidercontent";
+  -ms-grid-columns: 100px 1fr 100px;
+  grid-template-columns: 100px 1fr 100px;
+  -ms-grid-rows: (75px)[3];
+  grid-template-rows: repeat(3, 75px); }
+  .grid-container .slider-grid-content {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: slidercontent;
+    display: -ms-grid;
+    display: grid;
+    grid-template-areas: "arrowleft title arrowright";
+    -ms-flex-line-pack: center;
+    align-content: center; }
+    .grid-container .slider-grid-content .title-content {
+      -ms-grid-row: 1;
+      -ms-grid-column: 2;
+      grid-area: title;
+      -ms-grid-row-align: center;
+      align-self: center;
+      -ms-grid-column-align: center;
+      justify-self: center; }
+    .grid-container .slider-grid-content .arrow-left {
+      -ms-grid-row: 1;
+      -ms-grid-column: 1;
+      -ms-grid-row-align: center;
+      align-self: center;
+      -ms-grid-column-align: center;
+      justify-self: center;
+      grid-area: arrowleft;
+      padding: 10px;
+      -webkit-box-shadow: 0px 0px 0px 3px white;
+      box-shadow: 0px 0px 0px 3px white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      background: cornflowerblue; }
+    .grid-container .slider-grid-content .arrow-right {
+      -ms-grid-row: 1;
+      -ms-grid-column: 3;
+      -ms-grid-row-align: center;
+      align-self: center;
+      -ms-grid-column-align: center;
+      justify-self: center;
+      grid-area: arrowright;
+      padding: 10px;
+      -webkit-box-shadow: 0px 0px 0px 3px white;
+      box-shadow: 0px 0px 0px 3px white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      background: cornflowerblue; }
+
+.text-shadow {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); }
