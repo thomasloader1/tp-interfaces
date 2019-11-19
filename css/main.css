@@ -1,66 +1,297 @@
+.bg-darken-blue {
+  background: #112740; }
+
+.bg-whiteblue {
+  background: #429EFF;
+  color: white;
+  font-weight: bold; }
+
+.btn-custom {
+  border-radius: 10px;
+  color: white; }
+
 .slider-fluid {
   background-image: url("../img/bigstock-Business-Casual-People-Office-85581455-e1454520589445.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  position: relative;
+  z-index: -2; }
+  .slider-fluid::after {
+    content: "";
+    display: block;
+    background: rgba(17, 39, 64, 0.7);
+    width: 100%;
+    height: 225px;
+    position: absolute;
+    z-index: -1; }
+
+.grid-column-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 250px);
+  grid-template-rows: 350px;
+  gap: 0.6rem;
+  margin: auto;
+  padding: 10px;
+  width: 100%;
+  background: white;
+  justify-content: center; }
+  @media (max-width: 575px) {
+    .grid-column-5 {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 350px); } }
+  @media (min-width: 576px) and (max-width: 767px) {
+    .grid-column-5 {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 350px); } }
+
+.grid-container-references {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 200px);
+  gap: 10px;
+  position: relative;
+    /*   &::before {
+    content: "";
+    display: block;
+    width: 75px;
+    height: 0px;
+    border-bottom: 140px solid transparent;
+    border-right: 40px solid $celeste;
+    position: absolute;
+    z-index: 10;
+    right: 650px;
+}
+&::after {
+    content: "";
+    display: block;
+    width: 75px;
+    height: 0px;
+    border-top: 110px solid transparent;
+    border-right: 40px solid $celeste;
+    position: absolute;
+    z-index: 10;
+    left: 375px;
+    bottom: 210px;
+}*/ }
+  .grid-container-references .reference {
+    display: grid;
+    grid-template-columns: 150px 200px 1fr;
+    grid-template-rows: 200px;
+    background: #429EFF;
+    gap: 10px;
+    position: relative;
+    z-index: 3; }
+    .grid-container-references .reference img {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      width: 170px;
+      height: 200px;
+      object-fit: cover;
+      object-position: left;
+      z-index: 2; }
+    .grid-container-references .reference h2 {
+      align-self: center;
+      justify-self: end;
+      padding: 70px;
+      text-align: center;
+      font-weight: bold;
+      z-index: 3; }
+    .grid-container-references .reference .detail-user {
+      align-self: center;
+      margin-left: 20px; }
+      .grid-container-references .reference .detail-user h3,
+      .grid-container-references .reference .detail-user p {
+        z-index: 3;
+        color: white;
+        align-self: center;
+        padding: 3px;
+        margin-bottom: 0; }
+      .grid-container-references .reference .detail-user h3 {
+        font-size: 22px; }
+      .grid-container-references .reference .detail-user [class^="fas fa-star yellow-text"] {
+        padding-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px; }
+    .grid-container-references .reference::after {
+      content: "";
+      display: block;
+      background-color: #112740;
+      width: 450px;
+      height: 200px;
+      position: absolute;
+      z-index: -1; }
+  @media (max-width: 575px) {
+    .grid-container-references {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr); }
+      .grid-container-references .reference {
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 150px 120px;
+        gap: 0;
+        border-radius: 20px; }
+        .grid-container-references .reference img {
+          border-radius: 50%;
+          align-self: center;
+          justify-self: center;
+          width: 150px;
+          height: 150px; }
+        .grid-container-references .reference h2 {
+          align-self: center;
+          justify-self: center;
+          padding: 10px;
+          margin: 0;
+          font-size: 25px;
+          font-style: italic;
+          font-weight: lighter; }
+        .grid-container-references .reference .detail-user {
+          justify-content: center;
+          margin: 0; }
+          .grid-container-references .reference .detail-user h3,
+          .grid-container-references .reference .detail-user p {
+            z-index: 3;
+            color: white;
+            align-self: center;
+            padding: 3px;
+            margin-bottom: 0;
+            text-align: center; }
+          .grid-container-references .reference .detail-user h3 {
+            font-size: 25px; }
+          .grid-container-references .reference .detail-user [class^="fas fa-star yellow-text"] {
+            padding: 0;
+            margin: 0; }
+          .grid-container-references .reference .detail-user div {
+            display: grid;
+            grid-template-columns: repeat(5, 40px);
+            grid-template-rows: 40px;
+            justify-content: center; }
+            .grid-container-references .reference .detail-user div i {
+              justify-self: center;
+              align-self: center; }
+        .grid-container-references .reference::after {
+          border-bottom-left-radius: 50px;
+          border-bottom-right-radius: 50px;
+          content: "";
+          justify-self: center;
+          width: 180px;
+          height: 200px; } }
+  @media (min-width: 576px) and (max-width: 767px) {
+    .grid-container-references {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr; }
+      .grid-container-references .reference {
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 150px 120px;
+        gap: 0;
+        border-radius: 20px; }
+        .grid-container-references .reference img {
+          border-radius: 50%;
+          align-self: center;
+          justify-self: center;
+          width: 150px;
+          height: 150px; }
+        .grid-container-references .reference h2 {
+          align-self: center;
+          justify-self: center;
+          padding: 10px;
+          margin: 0;
+          font-size: 20px;
+          font-style: italic;
+          font-weight: lighter; }
+        .grid-container-references .reference .detail-user {
+          justify-content: center;
+          margin: 0; }
+          .grid-container-references .reference .detail-user h3,
+          .grid-container-references .reference .detail-user p {
+            z-index: 3;
+            color: white;
+            align-self: center;
+            padding: 3px;
+            margin-bottom: 0;
+            text-align: center; }
+          .grid-container-references .reference .detail-user h3 {
+            font-size: 25px; }
+          .grid-container-references .reference .detail-user [class^="fas fa-star yellow-text"] {
+            padding: 0;
+            margin: 0; }
+          .grid-container-references .reference .detail-user div {
+            display: grid;
+            grid-template-columns: repeat(5, 40px);
+            grid-template-rows: 40px;
+            justify-content: center; }
+            .grid-container-references .reference .detail-user div i {
+              justify-self: center;
+              align-self: center; }
+        .grid-container-references .reference::after {
+          border-bottom-left-radius: 50px;
+          border-bottom-right-radius: 50px;
+          content: "";
+          justify-self: center;
+          width: 180px;
+          height: 200px; } }
+
+.product {
+  display: grid;
+  grid-template-columns: 220px;
+  grid-template-rows: 100px 1fr;
+  box-shadow: 0px 0px 0px 2px #429EFF;
+  border-radius: 20px;
+  background: #429EFF;
+  width: 220px;
+  height: 350px;
+  justify-self: center; }
+  .product h4 {
+    align-self: center;
+    justify-self: center; }
+  .product .grid-image-product {
+    grid-row: 2/3;
+    border-radius: 20px;
+    object-fit: cover;
+    height: 250px; }
 
 .grid-container {
-  display: -ms-grid;
   display: grid;
   grid-template-areas: "slidercontent slidercontent slidercontent" "slidercontent slidercontent slidercontent" "slidercontent slidercontent slidercontent";
-  -ms-grid-columns: 100px 1fr 100px;
   grid-template-columns: 100px 1fr 100px;
-  -ms-grid-rows: (75px)[3];
   grid-template-rows: repeat(3, 75px); }
   .grid-container .slider-grid-content {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
     grid-area: slidercontent;
-    display: -ms-grid;
     display: grid;
     grid-template-areas: "arrowleft title arrowright";
-    -ms-flex-line-pack: center;
     align-content: center; }
     .grid-container .slider-grid-content .title-content {
-      -ms-grid-row: 1;
-      -ms-grid-column: 2;
       grid-area: title;
-      -ms-grid-row-align: center;
       align-self: center;
-      -ms-grid-column-align: center;
       justify-self: center; }
+      .grid-container .slider-grid-content .title-content h1 {
+        font-size: 20px; }
+      .grid-container .slider-grid-content .title-content p {
+        font-size: 14px; }
     .grid-container .slider-grid-content .arrow-left {
-      -ms-grid-row: 1;
-      -ms-grid-column: 1;
-      -ms-grid-row-align: center;
       align-self: center;
-      -ms-grid-column-align: center;
       justify-self: center;
       grid-area: arrowleft;
       padding: 10px;
-      -webkit-box-shadow: 0px 0px 0px 3px white;
       box-shadow: 0px 0px 0px 3px white;
       border-radius: 50%;
       width: 50px;
       height: 50px;
-      background: cornflowerblue; }
+      background: #112740; }
     .grid-container .slider-grid-content .arrow-right {
-      -ms-grid-row: 1;
-      -ms-grid-column: 3;
-      -ms-grid-row-align: center;
       align-self: center;
-      -ms-grid-column-align: center;
       justify-self: center;
       grid-area: arrowright;
       padding: 10px;
-      -webkit-box-shadow: 0px 0px 0px 3px white;
       box-shadow: 0px 0px 0px 3px white;
       border-radius: 50%;
       width: 50px;
       height: 50px;
-      background: cornflowerblue; }
+      background: #112740; }
+
+.grid-container-fluid {
+  display: grid; }
 
 .text-shadow {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); }
+
+/*# sourceMappingURL=main.css.map */

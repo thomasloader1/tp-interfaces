@@ -1,50 +1,79 @@
-    .slider-fluid {
-        background-image: url("../img/bigstock-Business-Casual-People-Office-85581455-e1454520589445.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+@import 'variables';
+@import 'aux';
+@import 'mixins';
+@import 'body';
+.product {
+    display: grid;
+    grid-template-columns: 220px;
+    grid-template-rows: 100px 1fr;
+    box-shadow: 0px 0px 0px 2px $celeste;
+    border-radius: 20px;
+    background: $celeste;
+    width: 220px;
+    height: 350px;
+    justify-self: center;
+    h4 {
+        align-self: center;
+        justify-self: center;
     }
-    
-    .grid-container {
+    .grid-image-product {
+        grid-row: 2/3;
+        border-radius: 20px;
+        object-fit: cover;
+        height: 250px;
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: "slidercontent slidercontent slidercontent" "slidercontent slidercontent slidercontent" "slidercontent slidercontent slidercontent";
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: repeat(3, 75px);
+    .slider-grid-content {
+        grid-area: slidercontent;
         display: grid;
-        grid-template-areas: "slidercontent slidercontent slidercontent" "slidercontent slidercontent slidercontent" "slidercontent slidercontent slidercontent";
-        grid-template-columns: 100px 1fr 100px;
-        grid-template-rows: repeat(3, 75px);
-        .slider-grid-content {
-            grid-area: slidercontent;
-            display: grid;
-            grid-template-areas: "arrowleft title arrowright";
-            align-content: center;
-            .title-content {
-                grid-area: title;
-                align-self: center;
-                justify-self: center;
+        grid-template-areas: "arrowleft title arrowright";
+        align-content: center;
+        .title-content {
+            grid-area: title;
+            align-self: center;
+            justify-self: center;
+            h1 {
+                font-size: 20px;
             }
-            .arrow-left {
-                align-self: center;
-                justify-self: center;
-                grid-area: arrowleft;
-                padding: 10px;
-                box-shadow: 0px 0px 0px 3px white;
-                border-radius: 50%;
-                width: 50px;
-                height: 50px;
-                background: cornflowerblue;
-            }
-            .arrow-right {
-                align-self: center;
-                justify-self: center;
-                grid-area: arrowright;
-                padding: 10px;
-                box-shadow: 0px 0px 0px 3px white;
-                border-radius: 50%;
-                width: 50px;
-                height: 50px;
-                background: cornflowerblue;
+            p {
+                font-size: 14px;
             }
         }
+        .arrow-left {
+            align-self: center;
+            justify-self: center;
+            grid-area: arrowleft;
+            padding: 10px;
+            box-shadow: 0px 0px 0px 3px white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            background: $azul-oscuro;
+        }
+        .arrow-right {
+            align-self: center;
+            justify-self: center;
+            grid-area: arrowright;
+            padding: 10px;
+            box-shadow: 0px 0px 0px 3px white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            background: $azul-oscuro;
+        }
     }
-    
-    .text-shadow {
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, .7);
-    }
+}
+
+.grid-container-fluid {
+    display: grid;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, .7);
+}
