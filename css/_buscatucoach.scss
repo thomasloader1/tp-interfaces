@@ -1,0 +1,35 @@
+.grid-steps {
+    display: grid;
+    grid-template: {
+        columns: repeat(auto-fit, 150px);
+        rows: 100px;
+    }
+    justify-content: center;
+    @for $i from 1 to 6 {
+        .step-#{$i} {
+            width: 70px;
+            height: 70px;
+            background: $azul-oscuro;
+            align-self: center;
+            justify-self: center;
+            border-radius: 50%;
+            color: white;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p {
+                margin-bottom: 0;
+                font-size: 18px;
+            }
+        }
+    }
+    .step-5 {
+        background: $celeste;
+        font-weight: 700;
+        box-shadow: 0px 0px 0px 5px $white;
+        p {
+            text-shadow: 2px 2px 5px rgba($color: #000, $alpha: 0.5);
+        }
+    }
+}
