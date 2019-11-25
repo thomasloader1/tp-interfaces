@@ -90,12 +90,39 @@
     .grid-steps .step-5 p {
       margin-bottom: 0;
       font-size: 18px; }
-  .grid-steps .step-5 {
+  .grid-steps .active-step {
     background: #429EFF;
     font-weight: 700;
     box-shadow: 0px 0px 0px 5px #fff; }
-    .grid-steps .step-5 p {
+    .grid-steps .active-step p {
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); }
+
+.body-custom {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  background: #429EFF;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 10px;
+  border: 5px solid #112740;
+  transition: all .3s; }
+  .body-custom:hover {
+    background: #0052a8;
+    font-size: 19px; }
+
+.img-full-login {
+  background-image: url("../img/linkinpark_principal.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 100vh; }
+
+.logo-form {
+  width: 120px;
+  height: 120px;
+  padding-bottom: 20px; }
 
 .slider-fluid {
   background-image: url("../img/bigstock-Business-Casual-People-Office-85581455-e1454520589445.jpg");
@@ -351,7 +378,7 @@
       align-self: center;
       justify-self: center; }
       .grid-container .slider-grid-content .title-content h1 {
-        font-size: 20px; }
+        font-size: 40px; }
       .grid-container .slider-grid-content .title-content p {
         font-size: 14px; }
     .grid-container .slider-grid-content .arrow-left {
@@ -380,5 +407,18 @@
 
 .text-shadow {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); }
+
+.map-container {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0; }
+
+.map-container iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute; }
 
 /*# sourceMappingURL=main.css.map */

@@ -39,7 +39,7 @@
             align-self: center;
             justify-self: center;
             h1 {
-                font-size: 20px;
+                font-size: 40px;
             }
             p {
                 font-size: 14px;
@@ -76,4 +76,19 @@
 
 .text-shadow {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, .7);
+}
+
+.map-container {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-container iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }

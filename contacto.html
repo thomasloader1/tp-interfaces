@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lorhard</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="./MDB-Free_4.8.10/css/modules/animations-extended.css">
+    <link rel="stylesheet" href="./MDB-Free_4.8.10/css/bootstrap.css">
+    <link rel="stylesheet" href="./MDB-Free_4.8.10/css/mdb.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body>
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-darken-blue">
+
+            <div class="container">
+                <!-- Navbar brand -->
+                <a class="navbar-brand" href="#">
+                    <img src="./img/svg/logoBlanco.svg" class="px-3 " height="40" alt="">
+                    <span class="font-weight-bold white-text py-5 h4">Lorhard</span>
+                </a>
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="basicExampleNav">
+
+                    <!-- Links -->
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">HOME
+          </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">BUSCA TU COACH</a>
+                        </li>
+                        <li class="nav-item font-weight-bold">
+                            <a class="nav-link" href="#">CONTACTO</a>
+                        </li>
+
+
+                    </ul>
+                    <!-- Links -->
+                    <!-- Links -->
+                    <ul class="nav">
+                        <li class="nav-item ">
+                            <a class="nav-link btn bg-whiteblue border-0 rounded-0 btn-sm" href="registrar.html">Registrarse</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn bg-whiteblue border-0 rounded-0 btn-sm" href="login.html">Ingresar</a>
+                        </li>
+
+                    </ul>
+                    <!-- Links -->
+                </div>
+
+        </nav>
+        <!--/.Navbar-->
+    </header>
+    <main>
+        <section class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Default form contact -->
+                    <form class="text-center border border-light p-5 mt-5" action="#!">
+
+                        <p class="h4 mb-4">Contacto</p>
+
+                        <!-- Name -->
+                        <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Nombre">
+
+                        <!-- Email -->
+                        <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+                        <!-- Subject -->
+                        <label class="text-left">Asunto</label>
+                        <select class="browser-default custom-select mb-4">
+            <option value="" disabled>Elegir una opcion</option>
+            <option value="1" selected>Feedback</option>
+            <option value="2">Saber mas de un servicio</option>
+            <option value="3">Tengo un problema concreto</option>
+            <option value="4">No estoy conforme con un servicio</option>
+        </select>
+
+                        <!-- Message -->
+                        <div class="form-group">
+                            <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Message"></textarea>
+                        </div>
+
+                        <!-- Copy -->
+                        <div class="custom-control custom-checkbox mb-4">
+                            <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
+                            <label class="custom-control-label" for="defaultContactFormCopy">Enviarme una copia a mi Email</label>
+                        </div>
+
+                        <!-- Send button -->
+                        <button class="btn btn-info btn-block" type="submit">Enviar</button>
+
+                    </form>
+                    <!-- Default form contact -->
+                </div>
+                <div class="col-md-6">
+                    <!--Google map-->
+                    <div id="map-container-google-1" class="z-depth-1-half map-container mt-5" style="height: 500px">
+                        <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+
+                    <!--Google Maps-->
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="page-footer font-small blue fixed-bottom">
+
+        <div class="d-flex justify-content-center mx-auto p-3">
+            <i class="fab fa-google-plus-g fa-2x  px-3"></i>
+            <i class="fab fa-facebook fa-2x  px-3"></i>
+            <i class="fab fa-instagram fa-2x  px-3"></i>
+            <i class="fab fa-linkedin fa-2x  px-3"></i>
+            <i class="fab fa-whatsapp  fa-2x px-3"></i>
+            <i class="fas fa-envelope  fa-2x px-3"></i>
+        </div>
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="#!"> Lorhard.com.ar</a>
+            <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+    <script src="./MDB-Free_4.8.10/js/jquery-3.4.1.min.js"></script>
+    <script src="./MDB-Free_4.8.10/js/popper.min.js"></script>
+    <script src="./MDB-Free_4.8.10/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

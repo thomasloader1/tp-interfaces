@@ -24,12 +24,28 @@
             }
         }
     }
-    .step-5 {
+    .active-step {
         background: $celeste;
         font-weight: 700;
         box-shadow: 0px 0px 0px 5px $white;
         p {
             text-shadow: 2px 2px 5px rgba($color: #000, $alpha: 0.5);
         }
+    }
+}
+
+.body-custom {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    background: $celeste;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    border: 5px solid $azul-oscuro;
+    transition: all .3s;
+    &:hover {
+        background: darken($celeste, 30%);
+        font-size: 19px;
     }
 }
